@@ -10,6 +10,22 @@ a {
 
 a:hover { color: #FFFFFF; }
 
+h1 {
+  position: fixed;
+  width:400px;
+  height:100px;
+  left: 10px;
+  top: 10px;
+}
+
+nav {
+  position: fixed;
+  width:400px;
+  height:100px;
+  right: 100px;
+  top: 55px;
+}
+
 header, nav, main, footer {
 	width: 80%;
 	margin: auto;
