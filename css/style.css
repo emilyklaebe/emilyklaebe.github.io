@@ -40,6 +40,7 @@ nav ul {
 	justify-content: flex-end;
 	font-family: "Work Sans", sans-serif;
 	list-style-type: none;
+	color: #636363;
 }
 nav li { padding: 10px 10px; }
 nav a { color: #FFFFFF; }
@@ -48,34 +49,38 @@ nav a:hover { color: white; }
 
 /* Main styles */
 main { 
-	background-color: #000000;
+	background-color: transparent;
 	display: grid;
 	grid-template-columns: 60% 40%;
 	font-family: "Work Sans", sans-serif;
+	color: #636363;
 }
 
 section {
 	padding: 40px 60px;
 	list-style-type: circle;
+	color: #636363;
 }
 
 section ol, aside ul {
 	margin-top: 20px; 
 	margin-left: 30px;
 	font-family: "Work Sans", sans-serif;
+	color: #636363;
 }
 
 aside {
 	padding: 40px 10px;
 	list-style-type: none;
+	color: #636363;
 }
 
 
 
 /* Footer styles */
 footer { 
-	background-color: #000;
-	color: white;
+	background-color: transparent;
+	color: #636363;
 	text-align: center;
 	font-family: "Work Sans", sans-serif;
  }
