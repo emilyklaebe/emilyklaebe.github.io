@@ -2,39 +2,81 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>I Love Emily!</title>
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Work+Sans&display=swap" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+	<title>Emily Klaebe</title>
+	<meta name="viewport" content="width=device-width">
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+	<!-- meyer-reset is a special css library that overrides all the ugle default css styles that come with html5 -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
+	<!--
 	<header>
-		<h1>Emily</h1>
+		<h1>Project One</h1>
+		<h1>Project Two</h1>
 	</header>
+
 	<nav>
 		<ul>
-			<li><a href="https://www.instagram.com/emklaebe/">Info</a></li>
+			<li><a href="subpage-one.html">example link to subpage one</a></li>
+			<li><a href="#">link</a></li>
+			<li><a href="#">link</a></li>
 		</ul>
 	</nav>
+
 	<main>
-		<section>
-			<h2>Projects</h2>
-			<ol>
-				<li><a href="#">Worst</a></li>
-				<li><a href="#">Best</a></li>
-				<li><a href="#">Treasure's Chest</a></li>
-			</ol>
-		</section>
-		<aside>
-			<h2>Useful Links</h2>
-			<ul>
-				<li><a href="#">link</a></li>
-				<li><a href="#">link</a></li>
-				<li><a href="#">link</a></li>
-			</ul>
-		</aside>
-	</main>
-	<footer>
-		<p>&copy; Emily! 2019</p>
-	</footer>
+		<blockquote>"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus soluta vero fugiat saepe, tempore laboriosam nemo pariatur maxime sunt rerum."</blockquote>
+
+		<div class="grid">
+			<div>Column 1</div>
+			<div>Column 2</div>
+		</div>
+	</main> -->
+
+
+	<div class="container">
+		<ul id="scene">
+			<li class="layer" data-depth="0">
+				<img src="images/backdrop-2.png">
+			</li>
+			<li class="layer" data-depth="0">
+				<img src="images/backdrop-3.png">
+			</li>
+			<li class="layer" data-depth="0">
+				<img src="images/backdrop-4.png">
+			</li>
+			<li class="layer" data-depth="0">
+				<img src="images/backdrop-5.png">
+			</li>
+			<li class="layer" data-depth="0">
+				<img src="images/backdrop-6.png">
+			</li>
+			<li class="layer" data-depth="0">
+				<img src="images/backdrop-7.png">
+			</li>
+			<li class="layer" data-depth="0">
+				<img src="images/backdrop-8.png">
+			</li>
+			<li class="layer" data-depth="0">
+				<img src="images/backdrop-9.png">
+			</li>
+		</ul>	
+	</div>
+
+
+	<!-- link for jquery -->
+	<script
+  	src="https://code.jquery.com/jquery-3.4.1.min.js"
+  	integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  	crossorigin="anonymous"></script>
+  	<!-- link for your script file -->
+  	<script src="scripts/script.js"></script>
+  	<script src="scripts/parallax.js" type="text/javascript"></script>
+	<script>
+		var scene = document.getElementById('scene');
+		var parallax = new Parallax(scene);
+	</script>
 </body>
 </html>
