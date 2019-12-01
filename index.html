@@ -12,20 +12,15 @@
 </head>
 <body>
 
-	<div class="container">
-		<ul id="scene">
-			<li class="layer" data-depth=".1"><img src="images/backdrop-2.png"></li>
-			<li class="layer" data-depth="1"><img src="images/backdrop-3.png"></li>
-			<li class="layer" data-depth="-1"><img src="images/backdrop-4.png"></li>
-			<li class="layer" data-depth="2"><img src="images/backdrop-5.png"></li>
-			<li class="layer" data-depth="0.5"><img src="images/backdrop-6.png"></li>
-		</ul>	
-	</div>
+	<p>My name is <span id="names"></span>.</p>
+	<p>I have <span id="hair"></span> hair.</p>
+	<p>I enjoy going <span id="activity"></span>.</p>
+	
+	<button onclick="reloadRandom()">Reload</button>
+
+	<p id="greeting"></p>
 
   	<script src="scripts/script.js"></script>
-	<script>
-		var scene = document.getElementById('scene');
-		var parallax = new Parallax(scene);
-	</script>
 </body>
+
 </html>
