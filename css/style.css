@@ -42,7 +42,7 @@ body {
 }
 
 main {
-	padding: 50px;
+	padding: 5px;
 }
 
 #occupation {
@@ -60,41 +60,58 @@ main {
   font-family: "Woodland-Light";
 }
 
+.container {
+	display: block;
+	margin: auto;
+	width: 77%;
+	text-align: left;
+	padding-top: 20px;
+	padding-left: 20px;
+}
+
 .container p {
 	font-family: "Radio";
 	font-size: 30px;
 	letter-spacing: 1px;
 }
 
-.container {
-	display: block;
-	margin: auto;
-	width: 80%;
-	text-align: left;
+.top-space {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	padding: 70px;
+}
+
+.button {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
 }
 
 button{
-  background-color: lightpink;
+  background-color: transparent;
   border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 20px;
-  font-weight: 900;
+  border-radius:50%;
+  -webkit-border-radius:50%;
+  -moz-border-radius:50%;
+  -o-border-radius:50%;
+  transition: all 1000ms ease-in-out;
 }
 
-button:hover{
-  background-color: hotpink; 
+button:hover{ 
+  -ms-transform: rotate(360deg); /* IE 9 */
+  -webkit-transform: rotate(360deg); /* Chrome, Safari, Opera */
+  transform: rotate(360deg);
   border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 20px;
-  font-weight: 900;
+  background-color: transparent;
+  opacity: .2;
+}
+
+button img {
+	width: 15%;
+}
+
+hr {
+	border-color: black;
+	border-width: .3px;
 }
 
 footer {
@@ -108,7 +125,6 @@ footer {
 .footer ul {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	align-items: center;
 }
 
 .footer li {
@@ -116,4 +132,13 @@ footer {
 	font-size: 18px;
 	letter-spacing: 1px; 
 	padding: 10px;
+	padding-top: 4px;
+}
+
+.work {
+	text-align: left;
+}
+
+.play {
+	text-align: right;
 }
