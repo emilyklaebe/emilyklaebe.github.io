@@ -36,12 +36,16 @@
 }
 
 body {
-  background-color: lightgrey;
-  color: black;
-  text-align:center;
-  font-size: 30px;
-  font-family: "Radio";
-  letter-spacing: 1px;
+	background-color: lightgrey;
+	color: black;
+	text-align:center;
+	font-size: 30px;
+	font-family: "Radio";
+	letter-spacing: 1px;
+}
+
+main {
+	padding: 50px;
 }
 
 #occupation {
@@ -60,8 +64,7 @@ body {
 }
 
 .container {
-	display: grid;
-	grid-template-columns: 1fr;
+	display: block;
 	margin: auto;
 	width: 80%;
 	text-align: left;

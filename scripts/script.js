@@ -9,13 +9,13 @@ function reloadRandom() {
 4. Then places it in the appropriate spot. */
 
 var occupation;
-occupation = ["graphic designer", "day-dreamer", "multidisciplinary designer", "visual communicator", "web designer"];
+occupation = ["graphic designer", "day-dreamer", "multidisciplinary designer", "visual communicator", "web designer", "type-lover", "branding strategist"];
 
 var work;
-work = ["tight-knit teams", "process-driven teams", "life-long learners", "thoughtful teams", "office dogs"];
+work = ["tight-knit teams", "process-driven teams", "life-long learners", "thoughtful teams", "office dogs", "Murder, She Wrote fanatics"];
 
 var fields;
-fields = ["fashion", "music", "film", "infograph", "news publication"];
+fields = ["fashion", "music", "film", "publications", "literature"];
 
 var randomOccupation = occupation
 [Math.floor(Math.random()*occupation.length)];
