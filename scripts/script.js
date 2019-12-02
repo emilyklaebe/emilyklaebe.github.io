@@ -12,7 +12,7 @@ var occupation;
 occupation = ["graphic designer", "day-dreamer", "multidisciplinary designer", "visual communicator", "web designer", "type-lover", "branding strategist"];
 
 var work;
-work = ["tight-knit teams", "process-driven teams", "life-long learners", "thoughtful teams", "office dogs", "Murder, She Wrote fanatics"];
+work = ["tight-knit teams", "process-driven teams", "life-long learners", "thoughtful teams", "office dogs", "Murder, She Wrote fanatics", ];
 
 var fields;
 fields = ["fashion", "music", "film", "publications", "literature"];
