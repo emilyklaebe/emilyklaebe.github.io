@@ -38,10 +38,7 @@
 body {
 	background-color: lightgrey;
 	color: black;
-	text-align:center;
-	font-size: 30px;
-	font-family: "Radio";
-	letter-spacing: 1px;
+	text-align: center;
 }
 
 main {
@@ -61,6 +58,12 @@ main {
 #fields {
   color: blue;
   font-family: "Woodland-Light";
+}
+
+.container p {
+	font-family: "Radio";
+	font-size: 30px;
+	letter-spacing: 1px;
 }
 
 .container {
@@ -92,4 +95,24 @@ button:hover{
   display: inline-block;
   font-size: 20px;
   font-weight: 900;
+}
+
+footer {
+	display: grid;
+	justify-content: space-between;
+	position: fixed;
+	bottom: 0;
+}
+
+.footer ul {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	align-items: center;
+}
+
+.footer li {
+	font-family: "Radio";
+	font-size: 18px;
+	letter-spacing: 1px; 
+	padding: 10px;
 }
