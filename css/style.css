@@ -45,6 +45,8 @@ main {
 	padding: 5px;
 }
 
+/*
+
 #occupation {
   color: blue;
   font-family: "Woodland-Light";
@@ -60,13 +62,17 @@ main {
   font-family: "Woodland-Light";
 }
 
+*/
+
 .container {
 	display: block;
 	margin: auto;
 	width: 77%;
 	text-align: left;
-	padding-top: 20px;
-	padding-left: 20px;
+	line-height: 2.15em;
+	width: 75vw;
+	padding-top: 50px;
+
 }
 
 .container p {
@@ -75,11 +81,19 @@ main {
 	letter-spacing: 1px;
 }
 
+.container em {
+	font-family: "Woodland-Light";
+	font-size: 30px;
+	color: blue;
+}
+
 .top-space {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	padding: 70px;
 }
+
+/* Button Styles Below!
 
 .button {
 	display: grid;
@@ -97,8 +111,8 @@ button {
 }
 
 button:hover { 
-  -ms-transform: rotate(360deg); /* IE 9 */
-  -webkit-transform: rotate(360deg); /* Chrome, Safari, Opera */
+  -ms-transform: rotate(360deg); 
+  -webkit-transform: rotate(360deg);
   transform: rotate(360deg);
   border: none;
   background-color: transparent;
@@ -109,13 +123,27 @@ button img {
 	width: 20%;
 }
 
+*/
+
 a {
 	color: black;
 	text-decoration: none;
 }
 
 a:hover {
-	color: blue;
+	  -webkit-stroke-width: 8px;
+      -webkit-stroke-color: blue;
+      -webkit-fill-color: blue;
+      text-shadow: 1px 0px 20px blue;
+      color: blue;
+}
+
+em:hover {
+	  -webkit-stroke-width: 8px;
+      -webkit-stroke-color: blue;
+      -webkit-fill-color: blue;
+      text-shadow: 1px 0px 20px blue;
+      color: blue;
 }
 
 hr {
