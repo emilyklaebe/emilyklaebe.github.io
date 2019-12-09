@@ -51,7 +51,7 @@ function getArea(w, h){
 
 // Test Below
 
-
+$("#nav-container").delay(1000).animate({"opacity": "1"}, 700);
 
 
 
