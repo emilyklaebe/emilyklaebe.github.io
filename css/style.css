@@ -18,51 +18,34 @@
 }
 
 @font-face {
-  font-family: "Radio-Bold";
-  src: url("../fonts/RadioGrotesk-Bold.eot");
+  font-family: "Telegraf-Light";
+  src: url("../fonts/Telegraf-UltraLight.eot");
   src:
-  url("../fonts/RadioGrotesk-Bold.woff") format("woff"),
-  url("../fonts/RadioGrotesk-Bold.otf") format("opentype"),
-  url("../fonts/RadioGrotesk-Bold.svg#filename") format("svg");
+  url("../fonts/Telegraf-UltraLight.woff") format("woff"),
+  url("../fonts/Telegraf-UltraLight.otf") format("opentype"),
+  url("../fonts/Telegraf-UltraLight.svg#filename") format("svg");
 }
 
 @font-face {
-  font-family: "Radio";
-  src: url("../fonts/RadioGrotesk-Regular.eot");
+  font-family: "Telegraf";
+  src: url("../fonts/Telegraf-Regular.eot");
   src:
-  url("../fonts/RadioGrotesk-Regular.woff") format("woff"),
-  url("../fonts/RadioGrotesk-Regular.otf") format("opentype"),
-  url("../fonts/RadioGrotesk-Regular.svg#filename") format("svg");
+  url("../fonts/Telegraf-Regular.woff") format("woff"),
+  url("../fonts/Telegraf-Regular.otf") format("opentype"),
+  url("../fonts/Telegraf-Regular.svg#filename") format("svg");
 }
 
 body {
 	background-color: #dadfe5;
 	color: black;
 	text-align: center;
+	overflow: hidden;
+	overflow-x: hidden;
 }
 
 main {
 	padding: 5px;
 }
-
-/*
-
-#occupation {
-  color: blue;
-  font-family: "Woodland-Light";
-}
-
-#work {
-  color: blue;
-  font-family: "Woodland-Light";
-}
-
-#fields {
-  color: blue;
-  font-family: "Woodland-Light";
-}
-
-*/
 
 .container {
 	display: block;
@@ -76,7 +59,7 @@ main {
 }
 
 .container p {
-	font-family: "Radio";
+	font-family: "Telegraf";
 	font-size: 30px;
 	letter-spacing: 1px;
 }
@@ -93,37 +76,9 @@ main {
 	padding: 70px;
 }
 
-/* Button Styles Below!
-
-.button {
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
+.social-media {
+	padding-top: 8px;
 }
-
-button {
-  background-color: transparent;
-  border: none;
-  border-radius:50%;
-  -webkit-border-radius:50%;
-  -moz-border-radius:50%;
-  -o-border-radius:50%;
-  transition: all 700ms ease-in-out;
-}
-
-button:hover { 
-  -ms-transform: rotate(360deg); 
-  -webkit-transform: rotate(360deg);
-  transform: rotate(360deg);
-  border: none;
-  background-color: transparent;
-  opacity: .2;
-}
-
-button img {
-	width: 20%;
-}
-
-*/
 
 a {
 	color: black;
@@ -138,25 +93,15 @@ a:hover {
       color: blue;
 }
 
-em:hover {
-	  -webkit-stroke-width: 8px;
-      -webkit-stroke-color: blue;
-      -webkit-fill-color: blue;
-      text-shadow: 1px 0px 20px blue;
-      color: blue;
-}
-
-hr {
-	border-color: black;
-	border-width: .3px;
-}
 
 footer {
 	display: block;
 	justify-content: space-between;
 	position: fixed;
+	background-color: #dadfe5;
 	width: 100%;
 	bottom: 0;
+	z-index: 9;
 }
 
 .footer ul {
@@ -165,11 +110,14 @@ footer {
 }
 
 .footer li {
-	font-family: "Radio";
+	font-family: "Telegraf";
 	font-size: 18px;
 	letter-spacing: 1px; 
 	padding: 10px;
-	padding-top: 4px;
+	padding-top: 12px;
+	border-top: solid;
+	border-color: black;
+	border-width: .3px;
 }
 
 .work {
@@ -214,38 +162,51 @@ footer {
 }
 
 
-/* Work Page Split Grid */
+/* Work Page */
 
-/*I love me some border-box*/
+.nav-container {
+  width: 100%;
+  height: 28px;
+  line-height: 28px;
+  letter-spacing: 1px;
+  background: black;
+  color: white;
+  font-family: "Woodland-Light";
+  position: fixed;
+  z-index: 10;
+}
+
+.nav-header {
+	display: block;
+	justify-content: space-between;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	background-color: black;
+}
+
+.nav-header ul {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	justify-content: space-between;
+}
+
+.nav-header li a {
+	color: white;
+}
+
+.nav-header li a:hover {
+	color: blue;
+}
+
 * {
     box-sizing: border-box;
 }
-/*This just stops me getting horizontal scrolling if anything overflows the width*/
-body {
-    overflow-x: hidden;
-}
-/*Just removing default browser padding/margin*/
-html,
-body {
-    padding: 0;
-    margin: 0;
-}
-/*Flexbox gives us the flexiness we need. The top just stays put as there is no scrolling on the body due to the page never exceeding viewport height*/
-.Top {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: darkgreen;
-    font-size: 3rem;
-    position: relative;
-    z-index: 10;
-    height: 100px;
-}
-/*This is our main wrapping element, it's made 100vh high to ensure it is always the correct size and then moved into place and padded with negative margin and padding*/
-.Container {
+
+.text-container {
     display: flex;
     overflow: hidden;
-    height: 100vh;
+    height: 110vh;
     margin-top: -100px;
     padding-top: 100px;
     position: relative;
@@ -253,15 +214,36 @@ body {
     backface-visibility: hidden;
     will-change: overflow;
 }
-/*All the scrollable sections should overflow and be whatever height they need to be. As they are flex-items (due to being inside a flex container) they could be made to stretch full height at all times if needed.
-WebKit inertia scrolling is being added here for any present/future devices that are able to make use of it.
-*/
+
+.text-container p {
+	font-family: "Telegraf-Light";
+	line-height: 1.3em;
+	font-size: 15px;
+}
+
 .Left {
     overflow: auto;
     height: auto;
     padding: .5rem;
     -webkit-overflow-scrolling: touch;
     -ms-overflow-style: none;
+}
+
+.Left-Grid {
+	display: grid;
+	grid-template-columns: 2fr 1fr; 
+	grid-gap: 40px;
+}
+
+.Left-Grid ul li {
+	font-family: "Telegraf-Light";
+	font-size: 12px;
+	line-height: 1.2em;
+}
+
+.Left-Grid em {
+	font-family: "Telegraf";
+	line-height: 1.7em;
 }
 
 .Right {
@@ -271,7 +253,7 @@ WebKit inertia scrolling is being added here for any present/future devices that
     -webkit-overflow-scrolling: touch;
     -ms-overflow-style: none;
 }
-/*Entirely optional – just wanted to remove the scrollbar on WebKit browsers as I find them ugly*/
+
 .Left::-webkit-scrollbar {
     display: none;
 }
@@ -279,7 +261,7 @@ WebKit inertia scrolling is being added here for any present/future devices that
 .Right::-webkit-scrollbar {
     display: none;
 }
-/*  Left and Right are set sizes while the Middle is set to flex one so it occupies all remaining space. This could be set as a width too if prefereable, perhaps using calc.*/
+
 .Left {
     width: 30rem;
     padding: 40px;
@@ -288,6 +270,136 @@ WebKit inertia scrolling is being added here for any present/future devices that
 
 .Right {
     flex: 1;
+    right: 0;
+    padding: 0;
 }
 
-/*  Test Line Below  */
+.Right img {
+	width: 125vh;
+}
+
+/* Background */
+
+@keyframes move {
+    100% {
+        transform: translate3d(0, 0, 1px) rotate(360deg);
+    }
+}
+
+.background {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.background span {
+    width: 30vmin;
+    height: 30vmin;
+    border-radius: 40vmin;
+    backface-visibility: hidden;
+    position: absolute;
+    animation: move;
+    animation-duration: 45;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+
+.background span:nth-child(0) {
+    color: blue;
+    top: 14%;
+    left: 53%;
+    animation-duration: 39s;
+    animation-delay: -14s;
+    transform-origin: -6vw -5vh;
+    box-shadow: 40vmin 0 5.1941913434646665vmin currentColor;
+}
+.background span:nth-child(1) {
+    color: blue;
+    top: 23%;
+    left: 60%;
+    animation-duration: 29s;
+    animation-delay: -50s;
+    transform-origin: -10vw -3vh;
+    box-shadow: -40vmin 0 5.976818185498336vmin currentColor;
+}
+.background span:nth-child(2) {
+    color: blue;
+    top: 43%;
+    left: 73%;
+    animation-duration: 36s;
+    animation-delay: -49s;
+    transform-origin: 0vw -15vh;
+    box-shadow: 40vmin 0 5.749042740762174vmin currentColor;
+}
+.background span:nth-child(3) {
+    color: blue;
+    top: 2%;
+    left: 44%;
+    animation-duration: 37s;
+    animation-delay: -43s;
+    transform-origin: -12vw 10vh;
+    box-shadow: 40vmin 0 5.481911847458311vmin currentColor;
+}
+.background span:nth-child(4) {
+    color: blue;
+    top: 41%;
+    left: 20%;
+    animation-duration: 25s;
+    animation-delay: -16s;
+    transform-origin: 15vw -6vh;
+    box-shadow: 40vmin 0 5.7320718930666335vmin currentColor;
+}
+.background span:nth-child(5) {
+    color: blue;
+    top: 49%;
+    left: 18%;
+    animation-duration: 46s;
+    animation-delay: -36s;
+    transform-origin: -14vw 2vh;
+    box-shadow: -40vmin 0 5.82110219028148vmin currentColor;
+}
+.background span:nth-child(6) {
+    color: blue;
+    top: 88%;
+    left: 98%;
+    animation-duration: 13s;
+    animation-delay: -14s;
+    transform-origin: 1vw 7vh;
+    box-shadow: 40vmin 0 5.631064952555162vmin currentColor;
+}
+.background span:nth-child(7) {
+    color: blue;
+    top: 44%;
+    left: 54%;
+    animation-duration: 22s;
+    animation-delay: -11s;
+    transform-origin: -19vw 19vh;
+    box-shadow: 40vmin 0 5.641125960521007vmin currentColor;
+}
+.background span:nth-child(8) {
+    color: blue;
+    top: 55%;
+    left: 65%;
+    animation-duration: 24s;
+    animation-delay: -49s;
+    transform-origin: 20vw 15vh;
+    box-shadow: 40vmin 0 5.917648168916921vmin currentColor;
+}
+.background span:nth-child(9) {
+    color: blue;
+    top: 98%;
+    left: 83%;
+    animation-duration: 25s;
+    animation-delay: -14s;
+    transform-origin: 14vw -9vh;
+    box-shadow: -40vmin 0 5.1465530961116635vmin currentColor;
+}
+
+
+
+
