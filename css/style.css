@@ -106,7 +106,7 @@ footer {
 
 .footer ul {
 	display: grid;
-	grid-template-columns: 1fr 1fr;
+	grid-template-columns: 1fr 1fr 1fr;
 }
 
 .footer li {
@@ -122,6 +122,10 @@ footer {
 
 .work {
 	text-align: left;
+}
+
+.home {
+	text-align: center;
 }
 
 .play {
@@ -141,6 +145,9 @@ footer {
   font-family: "Woodland-Light";
   overflow: hidden;
   position: fixed;
+  border-bottom: solid;
+  border-color: #dadfe5;
+  border-width: .3px;
   }
 
 .subheaderdiv {
@@ -148,7 +155,7 @@ footer {
     width: 200%;
     position: absolute;
     overflow: hidden;
-    animation: slideInAndOut 15s linear infinite;
+    animation: slideInAndOut 30s linear infinite;
 	}
 
 .ticker span {
@@ -183,6 +190,9 @@ footer {
 	width: 100%;
 	top: 0;
 	background-color: black;
+	border-bottom: solid;
+    border-color: #dadfe5;
+    border-width: .3px;
 }
 
 .nav-header ul {
@@ -244,6 +254,11 @@ footer {
 .Left-Grid em {
 	font-family: "Telegraf";
 	line-height: 1.7em;
+}
+
+.credit em {
+	font-family: "Telegraf";
+	line-height: 1.2em;
 }
 
 .Right {
