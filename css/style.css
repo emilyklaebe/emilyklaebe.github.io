@@ -169,7 +169,7 @@ footer {
 }
 
 
-/* Work Page */
+/* Work Page General Styles */
 
 .nav-container {
   width: 100%;
@@ -207,6 +207,11 @@ footer {
 
 .nav-header li a:hover {
 	color: blue;
+}
+
+.nav-header em {
+	border-bottom: solid;
+	border-width: .3px;
 }
 
 * {
@@ -290,8 +295,29 @@ footer {
 	width: 100%;
 }
 
+/* Y2K Page */
 
-/* Background */
+.y2k-body {
+	background-color: #52b84a;
+}
+
+.y2k-footer {
+	background-color: #52b84a;
+}
+
+.y2k img {
+	width: 40vw;
+	padding-top: 45px;
+}
+
+.y2k-header {
+	border-bottom: solid;
+    border-color: #52b84a;
+    border-width: .3px;
+}
+
+
+/* Background Home Page */
 
 @keyframes move {
     100% {
