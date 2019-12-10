@@ -316,6 +316,24 @@ footer {
     border-width: .3px;
 }
 
+/* Thesis Page */
+
+.thesis-body {
+	background-color: #FFEC66;
+}
+
+.thesis-footer {
+	background-color: #FFEC66;
+}
+
+.thesis-header {
+	border-bottom: solid;
+    border-color: #FFEC66;
+    border-width: .3px;
+}
+
+
+
 
 /* Background Home Page */
 
